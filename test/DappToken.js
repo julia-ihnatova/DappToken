@@ -1,7 +1,7 @@
-var DappToken = artifacts.require("./DappToken.sol");
+let DappToken = artifacts.require("./DappToken.sol");
 
 contract('DappToken', function(accounts){
-    var tokenInstance;
+    let tokenInstance;
 
     it('initializes the contract with the correct values', function(){
         return DappToken.deployed().then(function(instance){

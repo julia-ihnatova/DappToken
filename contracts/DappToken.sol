@@ -1,9 +1,8 @@
 pragma solidity ^0.4.23;
 
 contract DappToken{
-    // Constructor
-    // Set the total number of tokens
-    // Read the total number of tokens
+
+
     uint256 public totalSupply;
     mapping(address => uint256) public balanceOf;
 
@@ -30,7 +29,9 @@ contract DappToken{
         uint256 _value
     );
 
-
+    // Constructor
+    // Set the total number of tokens
+    // Read the total number of tokens
 
     constructor(uint256 _initialSupply) public{
         //allocate the initial supply
