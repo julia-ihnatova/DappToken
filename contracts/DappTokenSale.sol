@@ -58,7 +58,8 @@ contract DappTokenSale{
         //transfer remaining dapp tokens to admin
         require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));
 
-        //destroy contracts
-        selfdestruct(admin); //don't passes the tests
+        // UPDATE: Let's not destroy the contract here
+        // Just transfer the balance to the admin
+        admin.transfer(address(this).balance);
     }
 }
